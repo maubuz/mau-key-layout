@@ -1,0 +1,92 @@
+partial alphanumeric_keys
+xkb_symbols "mau_keys" {
+
+    key.type = "CUST_CAPSLOCK";
+
+// Arrow keys
+
+    key <AD08> {
+	symbols[Group1]= [               i,               I,               Up],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<UP>, clearmods=Lock) ]
+        };
+
+    key <AC07> {
+        symbols[Group1]= [               j,               J,               Left],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<LEFT>, clearmods=Lock) ]
+        };
+
+    key <AC08> {
+        symbols[Group1]= [               k,               K,               Down],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<DOWN>, clearmods=Lock) ]
+        };
+
+    key <AC09> {
+        symbols[Group1]= [	  	l,		L,		Right	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<RGHT>, clearmods=Lock) ]
+        };
+
+// Function keys
+
+    key <AB06> {       
+    	symbols[Group1]= [               n,               N,               BackSpace],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<BKSP>, clearmods=Lock) ]
+	};
+
+    key <AB07> {       
+    	symbols[Group1]= [               m,               M,               Delete],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<DELE>, clearmods=Lock) ]
+	};
+
+    key <AC06> {       
+    	symbols[Group1]= [               h,               H,               Home],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<HOME>, clearmods=Lock) ]
+	};
+
+    key <AC10> {       
+    	symbols[Group1]= [               semicolon,               colon,               End],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<END>, clearmods=Lock) ]
+	};
+
+    key <AD07> {      
+    	symbols[Group1]= [               u,              U,               Prior],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<PGUP>, clearmods=Lock) ]
+	};
+
+    key <AD09> {      
+    	symbols[Group1]= [               o,              O,               Next],
+	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<PGDN>, clearmods=Lock) ]
+	};
+
+// Hotkey shortcuts
+
+   key <AC01> {
+        symbols[Group1]= [	  	a,		A,		a	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AC01>, clearmods=Lock, modifiers=Control) ]
+        };
+
+   key <AC02> {
+        symbols[Group1]= [	  	s,		S,		x	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB02>, clearmods=Lock, modifiers=Control) ]
+        };
+
+   key <AC03> {
+        symbols[Group1]= [	  	d,		D,		c	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB03>, clearmods=Lock, modifiers=Control) ]
+        };
+
+   key <AC04> {
+        symbols[Group1]= [	  	f,		F,		v	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB04>, clearmods=Lock, modifiers=Control) ]
+        };
+
+   key <AD02> {
+        symbols[Group1]= [	  	w,		W,		w	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AD02>, clearmods=Lock, modifiers=Control) ]
+        };
+
+   key <AD03> {  // Caps + E simulates Alt + F4
+        symbols[Group1]= [	  	e,		E,		F4	],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<FK04>, clearmods=Lock, modifiers=Alt) ]
+        };
+
+};
